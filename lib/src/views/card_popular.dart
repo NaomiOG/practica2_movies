@@ -85,7 +85,8 @@ const CardPopular({
                             'voteaverage': popular.voteAverage,
                             'id': popular.id,
                             'backdroppath':popular.backdropPath,
-                            'ban' : ban
+                            'ban' : ban,
+                            'favorite': false
                           }
                         );
                       },

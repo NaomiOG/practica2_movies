@@ -8,6 +8,7 @@ import 'package:practica2_2021/src/network/api_actors.dart';
 import 'package:practica2_2021/src/network/api_images.dart';
 import 'package:practica2_2021/src/network/api_trailer.dart';
 import 'package:practica2_2021/src/screens/favorite_screen.dart';
+import 'package:practica2_2021/src/screens/popular_screen.dart';
 import 'package:practica2_2021/src/screens/videoplayer_screen.dart';
 import 'package:practica2_2021/src/utils/settings.dart';
 
@@ -24,8 +25,8 @@ class DetailScreen extends StatelessWidget {
           onPressed: () => 
           Navigator.pushAndRemoveUntil(
                         context,
-                        MaterialPageRoute(builder: (BuildContext context) => FavoriteScreen()),
-                        ModalRoute.withName('/favorite')
+                        MaterialPageRoute(builder: (BuildContext context) => movie['favorite']? FavoriteScreen() : PopularScreen()),
+                        movie['favorite']? ModalRoute.withName('/favorite'): ModalRoute.withName('/popular')
                       )      
            ,),
           backgroundColor: Settings.colorHeader),

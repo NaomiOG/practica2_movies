@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practica2_2021/src/models/populardao.dart';
 import 'package:practica2_2021/src/network/api_popular.dart';
+import 'package:practica2_2021/src/screens/dashboard.dart';
 import 'package:practica2_2021/src/utils/settings.dart';
 import 'package:practica2_2021/src/views/card_popular.dart';
 
@@ -24,6 +25,9 @@ class _PopularScreenState extends State<PopularScreen>{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
+        leading: BackButton(
+          color: Colors.white,
+          onPressed: () => Navigator.push(context, MaterialPageRoute(builder:(context)=> Dashboard(email: "naomiog98@gmail.com"))) ,),
         title: Text("Popular Movies"),
         backgroundColor: Settings.colorHeader,
       ),

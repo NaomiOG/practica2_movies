@@ -57,7 +57,8 @@ const CardFavorite({
                             'voteaverage': favorite.voteAverage,
                             'id': favorite.id,
                             'backdroppath':favorite.backdropPath,
-                            'ban': 1
+                            'ban': 1,
+                            'favorite':true
                           }
                         );
                       },
